@@ -15,8 +15,8 @@ int main (int argc, char *atgv[])
   {
     printf("\nEnter sentence %d: ", (i+1)); 
     fgets(string, sizeof(string), stdin); 
-    length= strlen(string)-1;  
-    printf("\nThe length of the sentence is: %d", length); 
+    length= strlen(string);  
+    printf("\nThe length of the sentence is: %d", length - 1); 
     ptr[i]= (char *) malloc(sizeof(char)*(length)); 
     strcpy(ptr, string); 
     hex_dump(ptr, length);  
